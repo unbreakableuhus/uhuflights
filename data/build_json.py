@@ -9,7 +9,7 @@ def airlines():
         ans.append(line.replace('"', '').split(','))
   
   with open('airlines.json', 'w') as fout:
-    fout.write(json.dumps(ans, encoding='latin-1'))
+    fout.write(json.dumps(ans, encoding='utf-8'))
 
 def cities():
   ans = {}
@@ -24,7 +24,7 @@ def cities():
           pass
   
   with open('cities.json', 'w') as fout:
-    fout.write(json.dumps(ans, encoding='latin-1'))
+    fout.write(json.dumps(ans, encoding='utf-8'))
 
 def routes():
   places = {}
@@ -56,11 +56,11 @@ def routes():
   
   for k, v in airlines.iteritems():
     with open('airlines/' + k + '.json', 'w') as fout:
-      fout.write(json.dumps(v, encoding='latin-1'))
+      fout.write(json.dumps(v, encoding='utf-8'))
   
   for k, v in places.iteritems():
     with open('places/' + k.replace('/', '-').replace(' ', '_') + '.json', 'w') as fout:
-      fout.write(json.dumps(v, encoding='latin-1'))
+      fout.write(json.dumps(v, encoding='utf-8'))
 
 if __name__ == '__main__':
   airlines()
