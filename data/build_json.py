@@ -5,9 +5,8 @@ def airlines():
   with open('airlines.csv', 'r') as fin:
     text = fin.read().split('\n')
     for i, line in enumerate(text):
-      if i > 0:
-        ans.append(line.replace('"', '').split(','))
-  
+      ans.append(line.replace('"', '').split(','))
+
   with open('airlines.json', 'w') as fout:
     fout.write(json.dumps(ans, encoding='utf-8'))
 
@@ -18,11 +17,11 @@ def cities():
     for i, line in enumerate(text):
       if i > 0:
         split_line = line.replace('"', '').split(',')
-        try:
-          ans[split_line[0].lower() + '^' + split_line[1].lower() + '^' + split_line[2].lower()] = split_line
-        except:
-          pass
-  
+        if len(split_line) > 1:
+          key = split_line[0].lower() + '^' + split_line[1].lower()
+          split_line.append(places.get(key, []))
+          ans[key] = split_line
+
   with open('cities.json', 'w') as fout:
     fout.write(json.dumps(ans, encoding='utf-8'))
 
