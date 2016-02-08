@@ -22,36 +22,6 @@ document.onreadystatechange = function() {
     airlineList = $('airline-list');
     tooltip = $('tooltip');
 
-    //Add search handler
-    $('search').addEventListener('keyup', (function() {
-      var timer = null,
-          parentNode = airlineList.parentNode,
-          lis = airlineList.getElementsByTagName('li'),
-          previousText = '';
-
-      function search(value) {
-        parentNode.removeChild(airlineList);
-        for (var i = 0, l = lis.length; i < l; i++) {
-          var li = lis[i],
-              text = li.textContent || li.innerText;
-          li.style.display = text.trim().toLowerCase().indexOf(value) > -1 ? '' : 'none';
-        }
-        parentNode.appendChild(airlineList);
-      }
-
-      return function(e) {
-        timer = clearTimeout(timer);
-        var trimmed = this.value.trim();
-        if (trimmed != previousText) {
-          timer = setTimeout(function() {
-            search(trimmed.toLowerCase());
-            previousText = trimmed;
-          }, 100);
-        }
-      };
-
-    })(), true);
-
     //load dataset
     loadData();
   }
