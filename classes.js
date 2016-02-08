@@ -348,11 +348,17 @@ var AirlineManager = function(data, models) {
         };
       }
 
+      var factor = 3;
+
+      if (key2 === "australia^sydney") {
+        factor = 1.2;
+      }
+
       var c1 = this.getCoordinates(city1[2], city1[3]),
           c2 = this.getCoordinates(city2[2], city2[3]),
           p1 = c1.p,
           p2 = c2.p,
-          p3 = p2.add(p1).$scale(0.5).$unit().$scale(p1.distTo(p2) / 3 + 1.2),
+          p3 = p2.add(p1).$scale(0.5).$unit().$scale(p1.distTo(p2) / factor + 1.2),
           theta1 = c1.theta,
           theta2 = c2.theta,
           phi1 = c1.phi,
