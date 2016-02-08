@@ -1,4 +1,4 @@
-importScripts('../../build/PhiloGL.js');
+importScripts('PhiloGL/PhiloGL.js');
 
 PhiloGL.unpack(self);
 

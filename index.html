@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PhiloGL - World Flights</title>
+    <title>Unbreakable Uhus</title>
     <link rel="stylesheet" media="all" type="text/css" href="style.css" />
-    <script src="../../build/PhiloGL.js"></script>
+    <script src="PhiloGL/PhiloGL.js"></script>
     <script src="classes.js"></script>
     <script src="index.js"></script>
   </head>
@@ -16,9 +16,12 @@
     
     <div id="container">
       <div id="title">
-        <h1>World Flights</h1>
-        <div class="description">Visualize major airlines flight routes</div>
-      </div>
+        <h1>Unbreakable Uhus</h1>
+        <div class="description">
+          <a href="https://twitter.com/unbreakableuhus" title="Unbreakable Uhus on Twitter">Twitter</a> |
+          <a href="https://www.facebook.com/unbreakableuhus" title="Unbreakable Uhus on Facebook">Facebook</a> |
+          <a href="https://github.com/unbreakableuhus" title="Unbreakable Uhus on GitHub">GitHub</a>
+        </div>
 
       <div class="canvas-container">
         <div id="canvas-wrapper">
@@ -38,8 +41,9 @@
   
   
   <div class="footer">
-    Authors: <a href='http://twitter.com/gerbille/'>Luz Caballero</a> &amp; <a href="http://philogb.github.com/">Nicolas Garcia
-      Belmonte</a>.
+    Based on <a href="https://github.com/senchalabs/philogl">PhiloGL</a> by
+    <a href='http://twitter.com/gerbille/'>Luz Caballero</a> &amp;
+    <a href="http://philogb.github.com/">Nicolas Garcia Belmonte</a>
   </div>
   
   <div class="tooltip hide" id="tooltip" style="width:auto;"></div>
@@ -50,8 +54,7 @@
       document.getElementById('fallback').innerHTML = ''
         +  '<div style="margin:10px;">'
         +   'Your browser (or hardware) does not support WebGL. Go <a href="http://get.webgl.org">here</a> to find more information.'
-        +  '</div>'
-        +   '<iframe width="853" height="510" src="http://www.youtube.com/embed/b263ETg5zqI" frameborder="0" allowfullscreen></iframe>';
+        +  '</div>';
     }
   </script>
 </body>
