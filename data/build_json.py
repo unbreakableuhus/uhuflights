@@ -1,5 +1,7 @@
 import json
 import re
+import os
+import os.path
 
 def airlines():
   ans = []
@@ -79,6 +81,10 @@ def routes():
       fout.write(json.dumps(v, encoding='utf-8'))
 
 if __name__ == '__main__':
+  if not os.path.exists('airlines'):
+    os.makedirs('airlines')
+  if not os.path.exists('places'):
+    os.makedirs('places')
   airlines()
   cities()
   routes()
