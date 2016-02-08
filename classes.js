@@ -110,16 +110,6 @@ RightMenu.prototype = {
         name = label.textContent,
         airlineMgr = this.airlineMgr,
         color = airlineMgr.getColor(airlineId) || airlineMgr.getAvailableColor();
-
-    if (checkbox.checked) {
-      this.selectedAirlines.innerHTML += '<li id=\'' + airlineId + '-selected\'>' +
-        '<input type=\'checkbox\' checked id=\'' + airlineId + '-checkbox-selected\' />' + 
-        '<div class=\'square\' style=\'background-color:rgb(' + color + ');\' ></div>' + 
-        name + '</li>';
-    } else {
-      var node = $(airlineId + '-selected');
-      node.parentNode.removeChild(node);
-    }
   },
 
   onClick: function(e) {
