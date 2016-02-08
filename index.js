@@ -373,13 +373,22 @@ function createApp() {
         if (model) {
           clearTimeout(this.timer);
           var style = tooltip.style,
-              name = data.citiesIndex[model.$pickingIndex].split('^'),
+              key = data.citiesIndex[model.$pickingIndex],
+              name = key.split('^'),
               textName = name[1][0].toUpperCase() + name[1].slice(1) + ', ' + name[0][0].toUpperCase() + name[0].slice(1),
               bbox = this.canvas.getBoundingClientRect();
 
           style.top = (e.y + 10 + bbox.top) + 'px';
           style.left = (e.x + 5 + bbox.left) + 'px';
           this.tooltip.className = 'tooltip show';
+
+          var city = data.cities[key];
+          textName = city[1] + ', ' + city[0];
+          var songs = city[4];
+
+          songs.forEach(function(item, index, array) {
+            textName = textName + '<br/>' + item;
+          });
 
           this.tooltip.innerHTML = textName;
         }
