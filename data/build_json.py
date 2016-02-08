@@ -1,4 +1,5 @@
 import json
+import re
 
 def airlines():
   ans = []
@@ -12,6 +13,22 @@ def airlines():
 
 def cities():
   ans = {}
+  places = {}
+  with open('songs.csv') as fin:
+    text = fin.read().split('\n')
+    for i, line in enumerate(text):
+      if i > 0:
+        split_line = re.findall('"[^"]*"', line);
+        if len(split_line) > 2:
+          song, country, city = split_line[0], split_line[1].lower(), split_line[2].lower()
+          song = song.replace('"', '')
+          country = country.replace('"', '')
+          city = city.replace('"', '')
+          key = country.lower() + '^' + city.lower()
+          place_songs = places.get(key, [])
+          place_songs.append(song)
+          places[key] = place_songs
+
   with open('cities.csv', 'r') as fin:
     text = fin.read().split('\n')
     for i, line in enumerate(text):
