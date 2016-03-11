@@ -1,3 +1,0 @@
-[submodule "vendor/philogl"]
-	path = vendor/philogl
-	url = https://github.com/senchalabs/philogl.git

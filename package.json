@@ -1,0 +1,23 @@
+{
+  "name": "unbreakableuhus",
+  "version": "0.0.1",
+  "description": "project-gruntfile",
+  "main": "gruntfile.js",
+  "scripts": {
+    "build": "grunt"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-auto-install": "^0.3.0",
+    "grunt-bower-install-simple": "^1.2.1",
+    "grunt-exec": "^0.4.6"
+  },
+  "dependencies": {},
+  "private": true,
+  "repository": {
+    "type": "",
+    "url": ""
+  }
+}
