@@ -2,7 +2,6 @@
   "name": "unbreakableuhus",
   "version": "0.0.1",
   "dependencies": {
-    "PhiloGL": "philogl#~1.6.8"
   },
   "private": true
 }
