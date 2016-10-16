@@ -1,64 +1,52 @@
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
   <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Home of the Unbreakable Uhus"/>
+    <meta name="author" content="Veit Jahns"/>
+    <link rel="shortcut icon" href="img/unbreakable_favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="img/unbreakable_favicon.png" type="image/x-icon"/>
     <title>Unbreakable Uhus</title>
-    <link rel="stylesheet" media="all" type="text/css" href="style.css" />
-    <script src="bower_components/PhiloGL/build/PhiloGL.js"></script>
-    <script src="classes.js"></script>
-    <script src="index.js"></script>
-
-    <link rel="shortcut icon" href="img/unbreakable_favicon.png" type="image/x-icon">
-    <link rel="icon" href="img/unbreakable_favicon.png" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet"/>
   </head>
   <body>
-    <div id="log-panel" style="display:none;">
-      <span id="log-message"></span>
-    </div>
-  
-    <div id="fallback" class="fallback"></div>
-    
-    <div id="container">
-      <div id="title">
-        <h1>Unbreakable Uhus</h1>
-        <div class="description">
-          <a href="https://twitter.com/unbreakableuhus" title="Unbreakable Uhus on Twitter">Twitter</a> |
-          <a href="https://www.facebook.com/unbreakableuhus" title="Unbreakable Uhus on Facebook">Facebook</a> |
-          <a href="https://github.com/unbreakableuhus" title="Unbreakable Uhus on GitHub">GitHub</a>
-        </div>
-
-      <div class="canvas-container">
-        <div id="canvas-wrapper">
-          <canvas id="map-canvas" width="1024" height="1024"></canvas>
-        </div>
-        <div id="list-wrapper" class="list-wrapper" style="display:none;">
-          <ul id="selected-airlines">
-          </ul>
-          <div class="list-container">
-            <ul id="airline-list"></ul>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">&nbsp;</h3>
+            </div>
+          </div>
+          <div class="inner cover">
+            <img id="logo" src="img/unbreakableuhus.png" alt="Unbreakable Uhus"/>
+            <p>
+              <a href="mailto:info@unbreakableuhus.com" title="E-Mail to Unbreakable Uhus">E-Mail</a> |
+              <a href="https://twitter.com/unbreakableuhus" title="Unbreakable Uhus on Twitter">Twitter</a> |
+              <a href="https://www.facebook.com/unbreakableuhus" title="Unbreakable Uhus on Facebook">Facebook</a> |
+              <a href="https://github.com/unbreakableuhus" title="Unbreakable Uhus on GitHub">GitHub</a>
+            </p>
+          </div>
+          <div class="mastfoot">
+          <div class="inner">
+            <p>
+              &#xa9; 2016 Unbreakable Uhus<br/>
+              Based on the cover template by <a href="https://twitter.com/mdo">@mdo</a><br/>
+              Photo by Sebastian Gilly<br/>
+            </p>
           </div>
         </div>
-        <div style="clear:both;"></div>
       </div>
     </div>
-  </div>
-  
-  
-  <div class="footer">
-    Based on <a href="https://github.com/senchalabs/philogl">PhiloGL</a> by
-    <a href='http://twitter.com/gerbille/'>Luz Caballero</a> &amp;
-    <a href="http://philogb.github.com/">Nicolas Garcia Belmonte</a>
-  </div>
-  
-  <div class="tooltip hide" id="tooltip" style="width:auto;"></div>
-  
-  <script>
-    if (!PhiloGL.hasWebGL()) {
-      document.body.className = 'no-webgl';
-      document.getElementById('fallback').innerHTML = ''
-        +  '<div style="margin:10px;">'
-        +   'Your browser (or hardware) does not support WebGL. Go <a href="http://get.webgl.org">here</a> to find more information.'
-        +  '</div>';
-    }
-  </script>
-</body>
+    <script src="js/jquery.min.js"/>
+    <script src="js/bootstrap.min.js"/>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
