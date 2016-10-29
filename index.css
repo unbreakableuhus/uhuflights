@@ -142,13 +142,15 @@ body {
  */
 
 @media (min-width: 768px) {
+  html, body {
+    background-image: url("img/background-768.jpg")
+  }
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
     top: 0;
   }
   .mastfoot {
-    position: fixed;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -164,6 +166,9 @@ body {
 }
 
 @media (min-width: 992px) {
+  html, body {
+    background-image: url("img/background-992.jpg")
+  }
   .masthead,
   .mastfoot,
   .cover-container {
