@@ -1,7 +1,6 @@
 bower_components
 node_modules
+public
 
-#ingore generated stuff in data
-/data/airlines
-/data/places
-/data/*.json
+.ftppass
+deploy.json
